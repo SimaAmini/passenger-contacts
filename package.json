@@ -12,6 +12,7 @@
     "@tanstack/react-query": "^5.15.0",
     "@tanstack/react-table": "^8.11.2",
     "axios": "^1.6.3",
+    "query-string": "^8.1.0",
     "react": "^18.2.0",
     "react-daisyui": "^5.0.0",
     "react-dom": "^18.2.0",
