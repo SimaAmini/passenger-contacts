@@ -92,7 +92,7 @@ export const ContactDetail = () => {
             <div class="divider"></div>
             <div>
               {labelValues.map((item) => (
-                <div className="flex flex-nowrap gap-6 flex-row w-full">
+                <div className="flex flex-nowrap space-y-4 flex-row w-full">
                   <div className="basis-1/4">
                     <p className="font-bold">{item.label}:</p>
                   </div>

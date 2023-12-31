@@ -4,13 +4,23 @@ import { columns } from "./columns";
 import { useContactList } from "./use-contact-list";
 
 export const ContactList = () => {
-  const { contactList } = useContactList();
+  const {
+    contactList,
+    goToContactDetail,
+    frequentlyVisitedContacts,
+    isLoading,
+  } = useContactList();
 
   return (
     <>
       <SearchBox />
 
-      <Table data={contactList} columns={columns} />
+      <Table
+        data={contactList}
+        columns={columns}
+        onRowClick={goToContactDetail}
+        isLoading={isLoading}
+      />
     </>
   );
 };

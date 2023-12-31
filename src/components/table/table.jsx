@@ -1,7 +1,8 @@
 import { flexRender } from "@tanstack/react-table";
 import { useTable } from "./use-table";
+import { TableRow } from "./table-row";
 
-export const Table = ({ columns = [], data = [] }) => {
+export const Table = ({ columns = [], data = [], onRowClick, isLoading }) => {
   const { table } = useTable({
     columns,
     data,
@@ -10,7 +11,6 @@ export const Table = ({ columns = [], data = [] }) => {
   return (
     <div className="overflow-x-auto">
       <table className="table table-zebra">
-        {/* head */}
         <thead>
           {table.getHeaderGroups().map((headerGroup) => (
             <tr key={headerGroup.id}>
@@ -29,13 +29,7 @@ export const Table = ({ columns = [], data = [] }) => {
         </thead>
         <tbody>
           {table.getRowModel().rows.map((row) => (
-            <tr key={row.id}>
-              {row.getVisibleCells().map((cell) => (
-                <td key={cell.id}>
-                  {flexRender(cell.column.columnDef.cell, cell.getContext())}
-                </td>
-              ))}
-            </tr>
+            <TableRow row={row} onRowClick={onRowClick} />
           ))}
         </tbody>
       </table>
