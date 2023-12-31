@@ -39,7 +39,7 @@ export const ContactDetail = () => {
               <figure className="px-10 pt-10">
                 <div className="avatar">
                   <div className="w-32 rounded-full">
-                    <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                    <img src={contactInfo.avatar} />
                   </div>
                 </div>
               </figure>
