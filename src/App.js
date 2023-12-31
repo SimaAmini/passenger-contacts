@@ -1,16 +1,13 @@
 import React from "react";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { Home } from "./pages/home";
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Home />,
-  },
-]);
+import { RouterProvider } from "react-router-dom";
+
+import { Header } from "./components/header";
+import { router } from "./router";
 
 const App = () => {
   return (
     <React.StrictMode>
+      <Header />
       <RouterProvider router={router} />
     </React.StrictMode>
   );
