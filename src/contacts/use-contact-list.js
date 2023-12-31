@@ -5,6 +5,7 @@ import { getContacts } from "../_services/get-contacts";
 import { useQuery } from "../config/use-query";
 import { useContactStore } from "../store/contact-store";
 import { sortByKey } from "../utils";
+import { FrequentlyContacts } from "./frequently-contacts";
 
 export const useContactList = () => {
   const navigate = useNavigate();
@@ -39,12 +40,14 @@ export const useContactList = () => {
   const contactList = useMemo(() => {
     if (!frequentlyVisitedContacts.length) return contacts;
 
-    const filtered = frequentlyVisitedContacts.map((contact) =>
-      contacts.filter((f) => f.id !== contact.id),
+    const filtered = contacts.filter(
+      (contact) =>
+        !frequentlyVisitedContacts.find(({ id }) => contact.id === id) &&
+        contact,
     );
 
     return filtered;
-  }, [frequentlyVisitedContacts]);
+  }, [contacts, frequentlyVisitedContacts]);
 
   return {
     contactList,
