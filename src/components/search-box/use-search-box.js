@@ -17,8 +17,8 @@ export const useSearchBox = () => {
     const input = formData.get("searchInput");
     const type = formData.get("search-type");
 
-    getContacts(input, type).then((response) => {
-      setContacts(response);
+    getContacts({ input, type }).then((contacts) => {
+      setContacts(contacts);
     });
   };
 

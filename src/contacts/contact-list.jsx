@@ -5,8 +5,14 @@ import { FrequentlyContacts } from "./frequently-contacts";
 import { useContactList } from "./use-contact-list";
 
 export const ContactList = () => {
-  const { contactList, goToContactDetail, isLoading } = useContactList();
-
+  const {
+    contactList,
+    goToContactDetail,
+    isLoading,
+    pageCount,
+    onPaginationChange,
+    pagination,
+  } = useContactList();
   return (
     <>
       <FrequentlyContacts />
@@ -17,6 +23,9 @@ export const ContactList = () => {
         columns={columns}
         onRowClick={goToContactDetail}
         isLoading={isLoading}
+        pageCount={pageCount}
+        onPaginationChange={onPaginationChange}
+        pagination={pagination}
       />
     </>
   );

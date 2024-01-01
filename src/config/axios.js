@@ -1,5 +1,4 @@
 import axios from "axios";
-import queryString from "query-string";
 
 const defaults = {
   baseURL: "http://localhost:1337",
@@ -15,10 +14,6 @@ const api = (method, url, params) =>
       method,
       headers: defaults.headers(),
       params,
-      paramsSerializer: {
-        serialize: (params) =>
-          queryString.stringify(params, { arrayFormat: "bracket" }),
-      },
     }).then(
       (response) => resolve(response.data),
       (error) => reject(error),

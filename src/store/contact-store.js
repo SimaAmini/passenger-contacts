@@ -5,9 +5,17 @@ export const useContactStore = create(
   persist(
     (set, get) => ({
       contacts: [],
+      meta: {},
 
-      setContacts: (contacts) => set(() => ({ contacts })),
+      setContacts: (data) => {
+        const { contacts, meta } = data;
+        set(() => ({ contacts }));
+        set(() => ({ meta }));
+      },
       getContacts: () => get().contacts,
+
+      setMeta: (meta) => set(() => ({ meta })),
+      getMeta: () => get().meta,
     }),
     {
       name: "contacts",

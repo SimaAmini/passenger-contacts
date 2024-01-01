@@ -12,6 +12,7 @@ const useQuery = ({
     queryKey,
     queryFn,
     initialData,
+    refetchOnWindowFocus: false,
     ...options,
   });
 };

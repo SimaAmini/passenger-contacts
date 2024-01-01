@@ -3,11 +3,23 @@ import { flexRender } from "@tanstack/react-table";
 import { useTable } from "./use-table";
 import { TableRow } from "./table-row";
 import { TableEmptyState } from "./table-empty-state";
+import { TablePagination } from "./table-pagination";
 
-export const Table = ({ columns = [], data = [], onRowClick, isLoading }) => {
+export const Table = ({
+  columns = [],
+  data = [],
+  onRowClick,
+  isLoading,
+  pageCount,
+  onPaginationChange,
+  pagination,
+}) => {
   const { table } = useTable({
     columns,
     data,
+    pageCount,
+    onPaginationChange,
+    pagination,
   });
 
   if (!data || !data.length) return <TableEmptyState />;
@@ -37,6 +49,7 @@ export const Table = ({ columns = [], data = [], onRowClick, isLoading }) => {
           ))}
         </tbody>
       </table>
+      <TablePagination table={table} />
     </div>
   );
 };
