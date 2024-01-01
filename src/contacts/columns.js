@@ -3,7 +3,7 @@ import { createColumnHelper } from "@tanstack/react-table";
 const columnHelper = createColumnHelper();
 export const columns = [
   columnHelper.accessor("fullName", {
-    header: "نام و نام خانوادگی",
+    header: "Full Name",
     cell: ({ row }) => (
       <div className="flex items-center space-x-3 truncate">
         <div className="avatar mx-4">
@@ -19,9 +19,9 @@ export const columns = [
   }),
 
   columnHelper.accessor("phone", {
-    header: "تلفن",
+    header: "Phone Number",
   }),
   columnHelper.accessor("address", {
-    header: "آدرس",
+    header: "Address",
   }),
 ];

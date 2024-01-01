@@ -8,12 +8,13 @@ const defaults = {
   }),
 };
 
-const api = (method, url) =>
+const api = (method, url, params) =>
   new Promise((resolve, reject) => {
     axios({
       url: `${defaults.baseURL}${url}`,
       method,
       headers: defaults.headers(),
+      params,
       paramsSerializer: {
         serialize: (params) =>
           queryString.stringify(params, { arrayFormat: "bracket" }),

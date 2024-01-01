@@ -1,12 +1,16 @@
-export const FrequentlyContacts = ({ contacts }) => {
+import { useFreqContacts } from "../store/freq-store";
+
+export const FrequentlyContacts = () => {
+  const { getFreqContacts } = useFreqContacts();
+  const contacts = getFreqContacts();
+
+  if (!contacts.length) return null;
+
   return (
-    <div className="flex flex-col space-y-4 my-4">
-      <h2 className="font-bold">Frequently Visited Contacts</h2>
-      <div className="flex flex-row space-x-10 justify-center items-center">
-        {contacts.map((contact) => (
-          <ContactCard contact={contact} />
-        ))}
-      </div>
+    <div className="flex flex-row space-x-10 justify-center items-center">
+      {contacts.map((contact) => (
+        <ContactCard contact={contact} />
+      ))}
     </div>
   );
 };

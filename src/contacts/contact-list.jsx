@@ -5,18 +5,12 @@ import { FrequentlyContacts } from "./frequently-contacts";
 import { useContactList } from "./use-contact-list";
 
 export const ContactList = () => {
-  const {
-    contactList,
-    goToContactDetail,
-    frequentlyVisitedContacts,
-    isLoading,
-  } = useContactList();
+  const { contactList, goToContactDetail, isLoading } = useContactList();
 
   return (
     <>
-      {frequentlyVisitedContacts.length && (
-        <FrequentlyContacts contacts={frequentlyVisitedContacts} />
-      )}
+      <FrequentlyContacts />
+
       <SearchBox />
       <Table
         data={contactList}
