@@ -24,6 +24,7 @@ export const useFreqContacts = () => {
 
   const setLastVisited = (contactId) => {
     const index = contacts.findIndex((contact) => contact.id == contactId);
+    if (index === -1) return;
     contacts[index].lastVisited = Date.now();
 
     const list = getFirst4Items(
