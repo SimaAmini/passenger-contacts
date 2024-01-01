@@ -1,5 +1,5 @@
 import { ContactList } from "../contacts/contact-list";
 
-export const Home = () => {
+export default function Home() {
   return <ContactList />;
-};
+}

@@ -1,5 +1,5 @@
 import { ContactDetail } from "../contact-detail/contact-detail";
 
-export const Detail = () => {
+export default function Detail() {
   return <ContactDetail />;
-};
+}
