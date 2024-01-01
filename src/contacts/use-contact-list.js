@@ -19,7 +19,7 @@ export const useContactList = () => {
   });
 
   useEffect(() => {
-    if (data) setContacts(data);
+    setContacts(data);
   }, [data]);
 
   return {

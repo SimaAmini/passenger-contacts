@@ -26,7 +26,7 @@ export const SearchBox = () => {
           <button className="btn btn-primary join-item " type="submit">
             Search
           </button>
-          <button class="btn btn-link" onClick={handleClearForm}>
+          <button className="btn btn-link" onClick={handleClearForm}>
             Clear
           </button>
         </div>

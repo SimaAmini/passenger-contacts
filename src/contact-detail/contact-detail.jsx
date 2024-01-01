@@ -89,7 +89,7 @@ export const ContactDetail = () => {
                 </div>
               </div>
             </div>
-            <div class="divider"></div>
+            <div className="divider"></div>
             <div>
               {labelValues.map((item) => (
                 <div className="flex flex-nowrap space-y-4 flex-row w-full">
