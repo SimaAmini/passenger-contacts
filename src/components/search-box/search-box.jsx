@@ -1,21 +1,7 @@
-import { getContacts } from "../../_services/get-contacts";
-import { useContactStore } from "../../store/contact-store";
+import { useSearchBox } from "./use-search-box";
 
 export const SearchBox = () => {
-  const { setContacts } = useContactStore();
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-
-    const formData = new FormData(event.target);
-
-    const input = formData.get("searchInput");
-    const type = formData.get("search-type");
-
-    getContacts(input, type).then((res) => {
-      setContacts(res);
-    });
-  };
+  const { handleSubmit, handleClearForm, inputRef, selectRef } = useSearchBox();
 
   return (
     <div className="flex justify-center w-full my-2">
@@ -25,11 +11,13 @@ export const SearchBox = () => {
             className="input input-bordered join-item"
             placeholder="Start typing..."
             name="searchInput"
+            ref={inputRef}
           />
           <select
             className="select select-bordered max-w-xs join-item"
             name="search-type"
             defaultValue={"lastName"}
+            ref={selectRef}
           >
             <option value="firstName">First Name</option>
             <option value="lastName">Last Name</option>
@@ -37,6 +25,9 @@ export const SearchBox = () => {
           </select>
           <button className="btn btn-primary join-item " type="submit">
             Search
+          </button>
+          <button class="btn btn-link" onClick={handleClearForm}>
+            Clear
           </button>
         </div>
       </form>
