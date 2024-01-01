@@ -19,8 +19,8 @@ export const useContactList = () => {
   });
 
   useEffect(() => {
-    if (!contacts.length && data) setContacts(data);
-  }, [contacts, data]);
+    if (data) setContacts(data);
+  }, [data]);
 
   return {
     contactList: contacts,

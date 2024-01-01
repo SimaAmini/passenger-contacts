@@ -1,12 +1,16 @@
 import { flexRender } from "@tanstack/react-table";
+
 import { useTable } from "./use-table";
 import { TableRow } from "./table-row";
+import { TableEmptyState } from "./table-empty-state";
 
 export const Table = ({ columns = [], data = [], onRowClick, isLoading }) => {
   const { table } = useTable({
     columns,
     data,
   });
+
+  if (!data || !data.length) return <TableEmptyState />;
 
   return (
     <div className="overflow-x-auto">
