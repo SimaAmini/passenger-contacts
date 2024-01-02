@@ -26,7 +26,7 @@ export const Table = ({
 
   return (
     <div className="overflow-x-auto">
-      <table className="table table-zebra">
+      <table className="table table-zebra" data-testid="table-component">
         <thead>
           {table.getHeaderGroups().map((headerGroup) => (
             <tr key={headerGroup.id}>

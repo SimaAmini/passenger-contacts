@@ -8,7 +8,8 @@ module.exports = defineConfig({
       // implement node event listeners here
     },
     env: {
-      BASE_URL: "http://localhost:1337/",
+      BASE_URL: "http://localhost:3000/",
+      MAIN_URL: "http://localhost:1337/",
     },
   },
 });
