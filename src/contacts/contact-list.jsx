@@ -1,18 +1,18 @@
-import { SearchBox } from "../components/search-box";
-import { Table } from "../components/table/table";
-import { columns } from "./columns";
+import { SearchBox, Table } from "@components";
 import { FrequentlyContacts } from "./components/frequently-contacts";
 import { useContactList } from "./use-contact-list";
+import { columns } from "./columns";
 
 export const ContactList = () => {
   const {
     contactList,
-    goToContactDetail,
     isLoading,
     pageCount,
-    onPaginationChange,
     pagination,
+    goToContactDetail,
+    onPaginationChange,
   } = useContactList();
+
   return (
     <>
       <FrequentlyContacts />

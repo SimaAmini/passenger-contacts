@@ -1,4 +1,4 @@
-import { EnvelopIcon, MessageIcon, PhoneIcon } from "../assets/svg-icons";
+import { EnvelopIcon, MessageIcon, PhoneIcon } from "@assets/svg-icons";
 
 import { useContactDetail } from "./use-contact-detail";
 

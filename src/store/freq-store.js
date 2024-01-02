@@ -1,7 +1,9 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
+
 import { useContactStore } from "./contact-store";
-import { sortByKey } from "../utils";
+import { sortByKey } from "@utilities";
+
 const useFreqContactStore = create(
   persist(
     (set, get) => ({

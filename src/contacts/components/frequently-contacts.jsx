@@ -1,4 +1,4 @@
-import { useFreqContacts } from "../../store/freq-store";
+import { useFreqContacts } from "@store/freq-store";
 import { ContactCard } from "./contact-card";
 
 export const FrequentlyContacts = () => {

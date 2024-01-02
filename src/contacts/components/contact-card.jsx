@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { EnvelopIcon, MessageIcon, PhoneIcon } from "../../assets/svg-icons";
+
+import { EnvelopIcon, MessageIcon, PhoneIcon } from "@assets/svg-icons";
 
 export const ContactCard = ({ contact }) => {
   return (

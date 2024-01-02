@@ -37,5 +37,14 @@ module.exports = {
   ],
   resolve: {
     extensions: [".js", ".jsx"],
+    alias: {
+      "@components": path.resolve(__dirname, "src/components"),
+      "@services": path.resolve(__dirname, "src/_services"),
+      "@mappers": path.resolve(__dirname, "src/_mappers"),
+      "@utilities": path.resolve(__dirname, "src/utils"),
+      "@assets": path.resolve(__dirname, "src/assets"),
+      "@store": path.resolve(__dirname, "src/store"),
+      "@core": path.resolve(__dirname, "src/core"),
+    },
   },
 };

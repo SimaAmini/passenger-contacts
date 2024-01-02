@@ -1,6 +1,6 @@
 import { flexRender } from "@tanstack/react-table";
 
-import { useTable } from "./use-table";
+import { useTable } from "./hooks/use-table";
 import { TableRow } from "./table-row";
 import { TableEmptyState } from "./table-empty-state";
 import { TablePagination } from "./table-pagination";

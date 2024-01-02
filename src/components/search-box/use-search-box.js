@@ -1,7 +1,7 @@
 import { useRef } from "react";
 
-import { getContacts } from "../../_services/get-contacts";
-import { useContactStore } from "../../store/contact-store";
+import { getContacts } from "@services/get-contacts";
+import { useContactStore } from "@store/contact-store";
 
 export const useSearchBox = () => {
   const { setContacts } = useContactStore();

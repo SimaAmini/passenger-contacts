@@ -20,7 +20,9 @@ export const TablePagination = ({ table }) => {
           »
         </button>
       </div>
-      <span>{`total: ${table.getPageCount()}`}</span>
+      <div>
+        <span>{`of ${table.getPageCount()} pages`}</span>
+      </div>
     </div>
   );
 };

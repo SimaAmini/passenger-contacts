@@ -1,9 +1,9 @@
+import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 
-import { getContact } from "../_services/get-contact";
-import { useQuery } from "../config/use-query";
-import { useEffect } from "react";
-import { useFreqContacts } from "../store/freq-store";
+import { getContact } from "@services/get-contact";
+import { useQuery } from "@core/use-query";
+import { useFreqContacts } from "@store/freq-store";
 
 export const useContactDetail = () => {
   const { id } = useParams();

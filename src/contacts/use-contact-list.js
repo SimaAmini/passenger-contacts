@@ -1,10 +1,10 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-import { getContacts } from "../_services/get-contacts";
-import { useContactStore } from "../store/contact-store";
-import { useQuery } from "../config/use-query";
-import { usePagination } from "../components/table/use-pagination";
+import { getContacts } from "@services/get-contacts";
+import { useContactStore } from "@store/contact-store";
+import { useQuery } from "@core/use-query";
+import { usePagination } from "@components/table/hooks/use-pagination";
 
 export const useContactList = () => {
   const navigate = useNavigate();

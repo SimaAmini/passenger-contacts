@@ -1,5 +1,5 @@
-import { mapContactsToModel } from "../_mappers/map-contacts-to-model";
-import { Request } from "../config/request";
+import { mapContactsToModel } from "@mappers/map-contacts-to-model";
+import { Request } from "@core/request";
 
 export const getContacts = async ({ input, type, skip, limit }) => {
   const createParams = () => {
