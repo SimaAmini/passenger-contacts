@@ -1,24 +1,7 @@
 import { Link } from "react-router-dom";
+import { EnvelopIcon, MessageIcon, PhoneIcon } from "../../assets/svg-icons";
 
-import { useFreqContacts } from "../store/freq-store";
-import { EnvelopIcon, MessageIcon, PhoneIcon } from "../assets/svg-icons";
-
-export const FrequentlyContacts = () => {
-  const { getFreqContacts } = useFreqContacts();
-  const contacts = getFreqContacts();
-
-  if (!contacts.length) return null;
-
-  return (
-    <div className="flex flex-row space-x-10 justify-center items-center my-6">
-      {contacts.map((contact) => (
-        <ContactCard contact={contact} />
-      ))}
-    </div>
-  );
-};
-
-const ContactCard = ({ contact }) => {
+export const ContactCard = ({ contact }) => {
   return (
     <Link to={`/contact/${contact.id}`}>
       <div className="card bg-neutral text-neutral-content shadow-xl w-100">

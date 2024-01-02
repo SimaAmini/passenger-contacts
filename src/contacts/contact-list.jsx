@@ -1,7 +1,7 @@
 import { SearchBox } from "../components/search-box";
 import { Table } from "../components/table/table";
 import { columns } from "./columns";
-import { FrequentlyContacts } from "./frequently-contacts";
+import { FrequentlyContacts } from "./components/frequently-contacts";
 import { useContactList } from "./use-contact-list";
 
 export const ContactList = () => {
