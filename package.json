@@ -1,5 +1,5 @@
 {
-  "name": "passenger contacts",
+  "name": "passenger-contacts",
   "version": "1.0.0",
   "description": "A React app with React Query, React Router, Axios, and Webpack",
   "main": "index.js",
