@@ -18,15 +18,17 @@ export const ContactList = () => {
       <FrequentlyContacts />
 
       <SearchBox />
-      <Table
-        data={contactList}
-        columns={columns}
-        onRowClick={goToContactDetail}
-        isLoading={isLoading}
-        pageCount={pageCount}
-        onPaginationChange={onPaginationChange}
-        pagination={pagination}
-      />
+      <div className="container mx-auto px-4">
+        <Table
+          data={contactList}
+          columns={columns}
+          onRowClick={goToContactDetail}
+          isLoading={isLoading}
+          pageCount={pageCount}
+          onPaginationChange={onPaginationChange}
+          pagination={pagination}
+        />
+      </div>
     </>
   );
 };

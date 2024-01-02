@@ -1,8 +1,8 @@
 export const Header = () => {
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar ">
       <div className="flex-1">
-        <a className="btn btn-ghost text-xl"> Snapp Contacts</a>
+        <a className="btn btn-ghost text-2xl">Snapp Contacts</a>
       </div>
       <div className="flex-none">
         <button className="btn btn-ghost btn-circle avatar">

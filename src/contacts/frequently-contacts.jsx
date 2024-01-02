@@ -8,7 +8,7 @@ export const FrequentlyContacts = () => {
   if (!contacts.length) return null;
 
   return (
-    <div className="flex flex-row space-x-10 justify-center items-center">
+    <div className="flex flex-row space-x-10 justify-center items-center my-6">
       {contacts.map((contact) => (
         <ContactCard contact={contact} />
       ))}
@@ -19,7 +19,7 @@ export const FrequentlyContacts = () => {
 const ContactCard = ({ contact }) => {
   return (
     <Link to={`/contact/${contact.id}`}>
-      <div className="card bg-base-100 shadow-xl w-100">
+      <div className="card bg-neutral text-neutral-content shadow-xl w-100">
         <div className="flex flex-col items-center gap-4">
           <figure className="px-10 pt-10">
             <div className="avatar">

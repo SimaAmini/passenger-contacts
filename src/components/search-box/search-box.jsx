@@ -4,7 +4,7 @@ export const SearchBox = () => {
   const { handleSubmit, handleClearForm, inputRef, selectRef } = useSearchBox();
 
   return (
-    <div className="flex justify-center w-full my-2">
+    <div className="flex justify-center w-full my-2 bg-neutral py-6">
       <form onSubmit={handleSubmit}>
         <div className="join">
           <input

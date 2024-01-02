@@ -31,7 +31,7 @@ export const ContactDetail = () => {
     },
   ];
   return (
-    <>
+    <div className="container mx-auto px-4">
       <div className="w-full space-y-4 flex flex-col">
         <div className="card">
           <div className="card-body w-full">
@@ -105,6 +105,6 @@ export const ContactDetail = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
